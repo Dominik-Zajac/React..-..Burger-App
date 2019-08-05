@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 /* Components */
-import Aux from '../../../hoc/Aux';
+import Aux from '../../../hoc/Aux/Aux';
 import Backdrop from '../Backdrop/Backdrop';
 
 /* Styles */
