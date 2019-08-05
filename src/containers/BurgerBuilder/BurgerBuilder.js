@@ -3,9 +3,10 @@ import React, { Component } from 'react';
 /* Components */
 import Aux from '../../hoc/Aux/Aux';
 import axios from '../../axios-orders';
-import Spinner from '../../components/UI/Spinner/Spinner';
 import Burger from '../../components/Burger/Burger';
 import Modal from '../../components/UI/Modal/Modal';
+import withErrorHandler from '../../hoc/withErrorHandler/withErrorHandler';
+import Spinner from '../../components/UI/Spinner/Spinner';
 import BuilControls from '../../components/Burger/BuildControls/BuildControls';
 import OrderSummary from '../../components/Burger/OrderSummary/OrderSummary';
 
@@ -181,4 +182,4 @@ class BurgerBuilder extends Component {
     };
 };
 
-export default BurgerBuilder;
+export default withErrorHandler(BurgerBuilder, axios);
