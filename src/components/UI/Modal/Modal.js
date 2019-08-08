@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 /* Components */
-import Aux from '../../../hoc/Aux';
+import Aux from '../../../hoc/Aux/Aux';
 import Backdrop from '../Backdrop/Backdrop';
 
 /* Styles */
@@ -9,7 +9,7 @@ import classes from './Modal.css';
 
 class Modal extends Component {
     shouldComponentUpdate(nextProps, nextState) {
-        return nextProps.show !== this.props.show;
+        return nextProps.show !== this.props.show || nextProps.children !== this.props.children;
     };
 
     render() {

@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
+import { Route, Switch } from 'react-router-dom';
 
 /* Components */
-import Layout from './components/Layout/Layout';
+import Layout from './hoc/Layout/Layout';
+import Orders from './containers/Orders/Orders';
+import Checkout from './containers/Checkout/Checkout';
 import BurgerBuilder from './containers/BurgerBuilder/BurgerBuilder';
 
 class App extends Component {
@@ -9,7 +12,11 @@ class App extends Component {
         return (
             <div className='App'>
                 <Layout>
-                    <BurgerBuilder />
+                    <Switch>
+                        <Route path='/checkout' component={Checkout} />
+                        <Route path='/orders' component={Orders} />
+                        <Route path='/' exact component={BurgerBuilder} />
+                    </Switch>
                 </Layout>
             </div>
         );
