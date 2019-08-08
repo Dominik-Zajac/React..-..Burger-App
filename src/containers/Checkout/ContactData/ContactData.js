@@ -20,40 +20,37 @@ class ContactData extends Component {
                 },
                 value: ''
             },
-            address: {
-                street: {
-                    elementType: 'input',
-                    elementConfig: {
-                        type: 'text',
-                        placeholder: 'Your Street'
-                    },
-                    value: ''
+            street: {
+                elementType: 'input',
+                elementConfig: {
+                    type: 'text',
+                    placeholder: 'Your Street'
                 },
-                zipCode: {
-                    elementType: 'input',
-                    elementConfig: {
-                        type: 'text',
-                        placeholder: 'ZIP Code'
-                    },
-                    value: ''
+                value: ''
+            },
+            zipCode: {
+                elementType: 'input',
+                elementConfig: {
+                    type: 'text',
+                    placeholder: 'ZIP Code'
                 },
-                country: {
-                    elementType: 'input',
-                    elementConfig: {
-                        type: 'text',
-                        placeholder: 'Country'
-                    },
-                    value: ''
+                value: ''
+            },
+            country: {
+                elementType: 'input',
+                elementConfig: {
+                    type: 'text',
+                    placeholder: 'Country'
                 },
-
-                email: {
-                    elementType: 'input',
-                    elementConfig: {
-                        type: 'email',
-                        placeholder: 'Your Email'
-                    },
-                    value: ''
+                value: ''
+            },
+            email: {
+                elementType: 'input',
+                elementConfig: {
+                    type: 'email',
+                    placeholder: 'Your Email'
                 },
+                value: ''
             },
             deliveryMethod: {
                 elementType: 'select',
@@ -103,6 +100,7 @@ class ContactData extends Component {
                 config: this.state.orderForm[key]
             });
         };
+        console.log(formElementsArray)
 
         let form = (
             <form>
@@ -113,7 +111,7 @@ class ContactData extends Component {
                         elementConfig={formElement.config.elementConfig}
                         value={formElement.config.value}
                     />
-                ))};
+                ))}
                 <Button btnType='Success' clicked={this.orderHandler}>ORDER</Button>
             </form>
         );
