@@ -9,7 +9,7 @@ import './index.css';
 import reducer from './store/reducer';
 import registerServiceWorker from './registerServiceWorker';
 
-const store = createStore(reducer);
+const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 const app = (
     <Provider store={store} >
